@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Точка кофе{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="{{ url_for('index') }}">ТОЧКА КОФЕ</a>
+        <nav>
+            <a href="{{ url_for('index') }}">Главная</a>
+            <a href="{{ url_for('menu') }}">Меню</a>
+            <a href="{{ url_for('about') }}">О нас</a>
+        </nav>
+        <a class="header-action" href="{{ url_for('menu') }}">Выбрать напиток</a>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+    <footer>
+        <span>Точка кофе</span>
+        <span>Москва, Ленинградский проспект, 12</span>
+        <span>Ежедневно 08:00–22:00</span>
+    </footer>
+</body>
+</html>

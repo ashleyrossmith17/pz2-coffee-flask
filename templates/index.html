@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Точка кофе — главная{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">Спешелти-кофе рядом с домом</p>
+        <h1>Утро начинается с хорошей точки</h1>
+        <p>Обжариваем зерно небольшими партиями, печём круассаны каждый день и помним любимые напитки постоянных гостей.</p>
+        <div class="hero-actions">
+            <a class="primary" href="{{ url_for('menu') }}">Посмотреть меню</a>
+            <a class="secondary" href="{{ url_for('about') }}">Узнать о кофейне</a>
+        </div>
+    </div>
+</section>
+<section class="features">
+    <article><strong>08:00</strong><span>открываем двери</span></article>
+    <article><strong>6 сортов</strong><span>в постоянной ротации</span></article>
+    <article><strong>12 минут</strong><span>среднее время заказа</span></article>
+</section>
+<section class="split">
+    <div>
+        <p class="eyebrow">Сегодня рекомендуем</p>
+        <h2>Флэт уайт и миндальный круассан</h2>
+        <p>Плотный эспрессо, шелковистое молоко и свежая выпечка — понятная пара без лишней сложности.</p>
+    </div>
+    <div class="photo crop-cup" role="img" aria-label="Кофе и выпечка"></div>
+</section>
+{% endblock %}

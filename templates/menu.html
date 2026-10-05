@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Меню — Точка кофе{% endblock %}
+{% block content %}
+<section class="page-intro compact">
+    <p class="eyebrow">Меню</p>
+    <h1>Кофе, чай и свежая выпечка</h1>
+    <p>Размер напитка можно выбрать при заказе. Для молочных позиций доступно овсяное молоко.</p>
+</section>
+<section class="menu-layout">
+    <div class="menu-grid">
+        {% for item in drinks %}
+        <article class="menu-card">
+            <div>
+                <h2>{{ item.name }}</h2>
+                <p>{{ item.description }}</p>
+            </div>
+            <strong>{{ item.price }} ₽</strong>
+        </article>
+        {% endfor %}
+    </div>
+    <aside class="menu-photo photo crop-beans" aria-label="Кофейное зерно"></aside>
+</section>
+{% endblock %}
